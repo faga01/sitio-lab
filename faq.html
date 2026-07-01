@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Preguntas Frecuentes - Soto Net (Laboratorio)</title>
+  <link rel="stylesheet" href="estilo.css">
+
+  <!-- ============================================= -->
+  <!-- AQUI VA EL CODIGO DE GTM (parte 1, en el HEAD) -->
+   <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PLSKZG65');</script>
+<!-- End Google Tag Manager -->
+  <!-- ============================================= -->
+
+</head>
+<body>
+
+  <!-- AQUI VA EL CODIGO DE GTM (parte 2, tras <body>) -->
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PLSKZG65"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">Soto Net</a>
+      <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="planes.html">Planes y Servicios</a></li>
+        <li><a href="faq.html">Preguntas Frecuentes</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section>
+    <h2>Preguntas Frecuentes</h2>
+
+    <div class="faq-item">
+      <div class="faq-pregunta">¿Qué velocidades de internet ofrecen? <span>+</span></div>
+      <div class="faq-respuesta"><p>Ofrecemos planes desde 100 Mbps hasta 400 Mbps, según tus necesidades de hogar o empresa.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-pregunta">¿Cuál es la cobertura en mi zona? <span>+</span></div>
+      <div class="faq-respuesta"><p>Tenemos cobertura en la provincia de Soto. Escríbenos con tu dirección y verificamos disponibilidad.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-pregunta">¿Cuánto cuesta la instalación? <span>+</span></div>
+      <div class="faq-respuesta"><p>La instalación tiene un costo único que varía según el plan. Consulta promociones vigentes.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-pregunta">¿El servicio tiene permanencia mínima? <span>+</span></div>
+      <div class="faq-respuesta"><p>Manejamos planes con y sin cláusula de permanencia. Te explicamos las opciones al contratar.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-pregunta">¿Qué hago si se cae el servicio? <span>+</span></div>
+      <div class="faq-respuesta"><p>Contamos con soporte técnico local. Puedes reportar por WhatsApp y atendemos lo antes posible.</p></div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-pregunta">¿Tienen planes para empresas? <span>+</span></div>
+      <div class="faq-respuesta"><p>Sí, ofrecemos conexión dedicada con soporte prioritario para negocios. Pregunta por el Plan Empresa.</p></div>
+    </div>
+
+  </section>
+
+  <a href="https://wa.me/573000000000?text=Hola,%20tengo%20una%20pregunta" class="wsp-flotante" id="btn-wsp-flotante">WhatsApp</a>
+
+  <footer>
+    <p>Soto Net (sitio de práctica) · Provincia de Soto, Santander · Este es un sitio ficticio de laboratorio.</p>
+  </footer>
+
+
+  <!-- 
+  <script>
+    // Acordeon de FAQ
+    document.querySelectorAll('.faq-pregunta').forEach(function(p) {
+      p.addEventListener('click', function() {
+        p.parentElement.classList.toggle('activo');
+      });
+    });
+  </script>
+  -->
+
+  <script>
+  // Acordeon de FAQ
+  document.querySelectorAll('.faq-pregunta').forEach(function(p) {
+    p.addEventListener('click', function() {
+      var item = p.parentElement;
+      item.classList.toggle('activo');
+      if (item.classList.contains('activo')) {
+        var pregunta = p.childNodes[0].textContent.trim();
+        if (window.dataLayer) {
+          window.dataLayer.push({
+            'event': 'apertura_faq',
+            'pregunta_faq': pregunta
+          });
+        }
+      }
+    });
+  });
+  </script>
+
+</body>
+</html>

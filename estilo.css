@@ -1,0 +1,51 @@
+/* Estilos del sitio laboratorio - ISP ficticio */
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: Arial, Helvetica, sans-serif; color: #2a2a2a; line-height: 1.6; }
+
+/* Barra de navegacion */
+header { background: #1F4E5F; padding: 0; position: sticky; top: 0; z-index: 100; }
+nav { max-width: 1000px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; flex-wrap: wrap; }
+.logo { color: #fff; font-size: 22px; font-weight: bold; text-decoration: none; }
+.menu { list-style: none; display: flex; gap: 22px; }
+.menu a { color: #cfe3ea; text-decoration: none; font-size: 15px; transition: color .2s; }
+.menu a:hover { color: #fff; }
+
+/* Secciones */
+section { max-width: 1000px; margin: 0 auto; padding: 50px 20px; }
+.hero { text-align: center; background: linear-gradient(135deg, #eef4f6, #dceaef); border-radius: 0; }
+.hero h1 { font-size: 34px; color: #1F4E5F; margin-bottom: 14px; }
+.hero p { font-size: 18px; color: #4a4a4a; max-width: 620px; margin: 0 auto 26px; }
+h2 { color: #2E75B6; font-size: 26px; margin-bottom: 18px; text-align: center; }
+
+/* Boton WhatsApp */
+.btn-wsp { display: inline-block; background: #25D366; color: #fff; padding: 14px 28px; border-radius: 8px; text-decoration: none; font-size: 16px; font-weight: bold; transition: background .2s; }
+.btn-wsp:hover { background: #1da851; }
+.wsp-flotante { position: fixed; bottom: 22px; right: 22px; background: #25D366; color: #fff; padding: 14px 20px; border-radius: 50px; text-decoration: none; font-weight: bold; box-shadow: 0 4px 12px rgba(0,0,0,.25); z-index: 200; }
+
+/* Galeria */
+.galeria { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 20px; }
+.galeria div { background: #cfe3ea; border-radius: 8px; height: 150px; display: flex; align-items: center; justify-content: center; color: #1F4E5F; font-weight: bold; text-align: center; padding: 10px; }
+
+/* Planes */
+.planes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 20px; }
+.plan { border: 2px solid #dceaef; border-radius: 10px; padding: 24px; text-align: center; }
+.plan h3 { color: #1F4E5F; font-size: 20px; margin-bottom: 8px; }
+.plan .precio { font-size: 28px; color: #2E75B6; font-weight: bold; margin: 12px 0; }
+
+/* Formulario */
+form { max-width: 480px; margin: 20px auto 0; display: flex; flex-direction: column; gap: 14px; }
+form input, form textarea { padding: 12px; border: 1px solid #ccc; border-radius: 6px; font-size: 15px; font-family: inherit; }
+form button { background: #2E75B6; color: #fff; border: none; padding: 14px; border-radius: 6px; font-size: 16px; font-weight: bold; cursor: pointer; }
+form button:hover { background: #1F4E5F; }
+.mensaje-ok { display: none; background: #e6f4ea; color: #1f7a4d; padding: 14px; border-radius: 6px; text-align: center; margin-top: 14px; }
+
+/* FAQ acordeon */
+.faq-item { border: 1px solid #dceaef; border-radius: 8px; margin-bottom: 10px; overflow: hidden; }
+.faq-pregunta { background: #f4f7f9; padding: 16px; cursor: pointer; font-weight: bold; color: #1F4E5F; display: flex; justify-content: space-between; }
+.faq-respuesta { padding: 0 16px; max-height: 0; overflow: hidden; transition: all .3s; }
+.faq-respuesta p { padding: 14px 0; }
+.faq-item.activo .faq-respuesta { max-height: 200px; }
+.faq-item.activo .faq-pregunta span { transform: rotate(45deg); }
+.faq-pregunta span { transition: transform .3s; }
+
+footer { background: #1F4E5F; color: #cfe3ea; text-align: center; padding: 24px; margin-top: 40px; font-size: 14px; }
